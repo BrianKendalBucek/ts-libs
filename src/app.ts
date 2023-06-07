@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { plainToClass } from 'class-transformer'; 
+// import { plainToClass } from 'class-transformer'; 
 import { Product } from "./product.model";
 
 const products = [
@@ -11,6 +11,8 @@ const products = [
 const loadedProducts = products.map(prod => {
   return new Product(prod.title, prod.price);
 });
+
+// const loadedProducts = plainToClass(Product, products); deprecated
 
 for (const prod of loadedProducts) {
   console.log(prod.getInformation());
