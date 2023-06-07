@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { Product } from "./product.model";
 
 const products = [
